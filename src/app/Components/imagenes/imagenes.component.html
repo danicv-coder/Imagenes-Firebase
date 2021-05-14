@@ -1,0 +1,20 @@
+<h1 class="title">Imagenes Firebase</h1>
+
+<div>
+<h2>Una imagen de firesbase</h2>
+<img src="{{image}}" class="img1">
+<button (click)="firebase()">Mostrar</button>
+</div>
+<hr>
+
+<div>
+<h2>lista de imagenes en firebase</h2>
+<hr>
+<div *ngFor="let  allImage of  allImage">
+<ul>
+  <li><img src="{{allImage}}" class="img1"></li>
+</ul>
+</div>
+<button (click)=" allImages()">Mostrar</button>
+</div>
+
