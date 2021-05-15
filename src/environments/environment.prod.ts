@@ -1,7 +1,5 @@
 export const environment = {
   production: true,
-  osmsoft: '/listCatalog?path=osm-soft',
-  firebaseCatalg: 'https://us-central1-osm-soft.cloudfunctions.net',
   firebase: {
     apiKey: "AIzaSyCRcFOQJFeBELD86MeM0g_lXjUZbAer65A",
     authDomain: "osm-soft-dev.firebaseapp.com",

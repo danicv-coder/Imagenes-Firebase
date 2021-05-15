@@ -14,7 +14,7 @@ export class FirebaseCatalgService {
   constructor( private http: HttpClient) { }
 
   ImageCatalog(pathh : string){
-    const path = `${environment.firebaseCatalg}/listCatalog?path=${pathh}`;
+    const path = `$`;
     console.log(path)
     return this.http.get<Catalog>(path);
 }
