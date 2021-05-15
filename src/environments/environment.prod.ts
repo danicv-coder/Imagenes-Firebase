@@ -1,7 +1,6 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyCRcFOQJFeBELD86MeM0g_lXjUZbAer65A",
     authDomain: "osm-soft-dev.firebaseapp.com",
     databaseURL: "https://osm-soft-dev.firebaseio.com",
     projectId: "osm-soft-dev",
