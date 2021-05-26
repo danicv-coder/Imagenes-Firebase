@@ -10,12 +10,15 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class FirebaseCatalgService {
+  results: any;
 
   constructor( private http: HttpClient) { }
 
   ImageCatalog(pathh : string){
-    const path = `$`;
-    console.log(path)
-    return this.http.get<Catalog>(path);
-}
+   
+      const path = `${environment.firebaseCatalg}/listCatalog?path=${pathh}`;
+      console.log(path)
+      return this.http.get<Catalog>(path);
+  }
+
 }
