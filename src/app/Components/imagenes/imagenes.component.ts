@@ -16,7 +16,7 @@ import { Product } from 'src/app/model/product';
 export class ImagenesComponent implements OnInit {
   products: Product[] = [];
   catalogList: any = dataCatalog;
-  image = '';
+  image = [];
   allImage = [''];
   path = 'osm-soft';
   elements = 30;
@@ -72,16 +72,17 @@ export class ImagenesComponent implements OnInit {
 
  }
 
-  async OneImage(name: string):Promise<string> {
-    const storage = firebase.storage();
-    const gsReference = storage.refFromURL(
-      'gs://osm-soft-dev.appspot.com/images/osm-soft/catalog/'
-    );
-    return await gsReference
-      .child(name)
-      .getDownloadURL()
+ async OneImage(name: string) {
+  const storage = firebase.storage();
+  const gsReference = storage.refFromURL('gs://osm-soft-dev.appspot.com/images/osm-soft/catalog');
+  return await gsReference.child(name).getDownloadURL().then((url) =>{
+ /*   document.querySelector('img').src = url; */
+ this.image = url;
+   console.log(url);
+   }).catch(()=>{
 
-  }
+  });
+ }
   catalogg(){
   /*   /*   for(let product of this.products){
         this.mostrarMap(product.code);
